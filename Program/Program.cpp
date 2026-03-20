@@ -3,85 +3,37 @@
 using namespace std;
 
 template <typename T>
-class List
+class Vector
 {
 private:
-	struct Node
-	{
-		T data;
-		Node* next;
-	};
-	int size;
-	Node* head;
+	T* pointer;
+	int count;
+	int capacity;
 public:
-	List()
+	Vector()
 	{
-		size = 0;
-		head = nullptr;
+		count = 0;
+		capacity = 0;
+		pointer = nullptr;
 	}
-	void push_back(T data)
+	void resize(int newSize)
 	{
-		Node* newNode = new Node;
-
-		newNode->data = data;
-
-		if (head == nullptr)
-		{			
-			head = newNode;
-
-			newNode->next = head;
-		}
-		else
+		capacity = newSize;
+		T* newPointer = new T[newSize];
+		for (int i = 0; i < capacity; i++)
 		{
-			newNode->next = head->next
-				;
-			head->next = newNode;
-			
-			head = newNode;
+			newPointer = NULL;
 		}
-		size++;
-	}
-	void pop_back()
-	{
-		if (head == nullptr)
-		{
-			cout << "Linked list is empty" << endl;
-		}
-		else
-		{
-			Node* deleteNode = head;
-
-			if (size == 1)
-			{
-				head = nullptr;
-			}
-			else
-			{
-				Node* currentNode = head->next;
-
-				while (currentNode->next != head)
-				{
-					currentNode = currentNode->next;
-				}
-
-				currentNode->next = head->next;
-				head = currentNode;
-			}
-			delete deleteNode;
-			size--;
-		}
+		newPointer
+		
 	}
 };
 
 int main()
 {
-	List<int> list;
+	Vector<int> vector;
 
-	list.push_back(10);
-	list.push_back(20);
-	list.push_back(30);
-
-	list.pop_back();
+	vector.resize(10);
 
 	return 0;
 }
