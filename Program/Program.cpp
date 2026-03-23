@@ -3,37 +3,42 @@
 using namespace std;
 
 template <typename T>
-class Vector
+class Stack
 {
 private:
-	T* pointer;
-	int count;
+	int highset;
 	int capacity;
+
+	T* container;
 public:
-	Vector()
+	Stack()
 	{
-		count = 0;
+		highset = -1;
 		capacity = 0;
-		pointer = nullptr;
+
+		container = nullptr;
 	}
 	void resize(int newSize)
 	{
 		capacity = newSize;
-		T* newPointer = new T[newSize];
-		for (int i = 0; i < capacity; i++)
+		T* temporary = new T[capacity];
+		if (highset <= 0)
 		{
-			newPointer = NULL;
+
 		}
-		newPointer
-		
+		else
+		{
+			for (int i = 0; i < highset; i++)
+			{
+				temporary[i] = container[i];
+			}
+		}
 	}
 };
 
 int main()
 {
-	Vector<int> vector;
-
-	vector.resize(10);
-
+	Stack<int> stack;
+	
 	return 0;
 }
