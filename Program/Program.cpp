@@ -1,44 +1,61 @@
-﻿#include <iostream>
+﻿#include<iostream>
+
+#define SIZE 5
 
 using namespace std;
 
 template <typename T>
-class Stack
+class Queue
 {
 private:
-	int highset;
-	int capacity;
-
-	T* container;
+	int rear;
+	int front;
+	
+	T container[SIZE];
 public:
-	Stack()
+	Queue()
 	{
-		highset = -1;
-		capacity = 0;
-
-		container = nullptr;
-	}
-	void resize(int newSize)
-	{
-		capacity = newSize;
-		T* temporary = new T[capacity];
-		if (highset <= 0)
+		rear = 0;
+		front = 0;
+		for (int i = 0; i < SIZE; i++)
 		{
-
+			container[i] = NULL;
+		}
+	}
+	void push(T data)
+	{
+		if (rear >= SIZE)
+		{
+			cout << "Linear queue overflow" << endl;
 		}
 		else
 		{
-			for (int i = 0; i < highset; i++)
-			{
-				temporary[i] = container[i];
-			}
+			container[rear++] = data;
 		}
+	}
+	void pop()
+	{
+		while (front == rear)
+		{
+			container[front++] = NULL;
+		}
+	}
+	const bool& empty()
+	{
+		return front == rear;
 	}
 };
 
 int main()
 {
-	Stack<int> stack;
-	
+	Queue<int> queue;
+
+	queue.push(10);
+	queue.push(20);
+	queue.push(30);
+	queue.push(40);
+	queue.push(50);
+	queue.push(60);
+
 	return 0;
 }

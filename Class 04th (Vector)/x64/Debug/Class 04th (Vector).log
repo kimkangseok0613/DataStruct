@@ -1,0 +1,16 @@
+﻿  Source.cpp
+C:\Users\Administrator\Desktop\DataStruct\Class 04th (Vector)\Source.cpp(53,30): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+      C:\Users\Administrator\Desktop\DataStruct\Class 04th (Vector)\Source.cpp(53,30):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\Administrator\Desktop\DataStruct\Class 04th (Vector)\Source.cpp(82,14):
+          컴파일되는 클래스 템플릿 인스턴스화 'Vector<int>'에 대한 참조를 확인하세요.
+          C:\Users\Administrator\Desktop\DataStruct\Class 04th (Vector)\Source.cpp(47,7):
+          클래스 템플릿 멤버 함수 'void Vector<int>::push_back(T)'을(를) 컴파일하는 중입니다.
+          with
+          [
+              T=int
+          ]
+              C:\Users\Administrator\Desktop\DataStruct\Class 04th (Vector)\Source.cpp(84,18):
+              'main'에서 'Vector<int>::push_back'에 대한 첫 번째 참조를 확인하세요.
+  
+  Class 04th (Vector).vcxproj -> C:\Users\Administrator\Desktop\DataStruct\Program\x64\Debug\Class 04th (Vector).exe
