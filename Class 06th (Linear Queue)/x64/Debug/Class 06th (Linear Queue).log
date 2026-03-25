@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Administrator\Desktop\DataStruct\Class 06th (Linear Queue)\Source.cpp(49,1): warning C4172: 지역 변수 또는 임시 의 주소를 반환하는 중
+C:\Users\Administrator\Desktop\DataStruct\Class 06th (Linear Queue)\Source.cpp(57,1): warning C4172: 지역 변수 또는 임시 의 주소를 반환하는 중
+  Class 06th (Linear Queue).vcxproj -> C:\Users\Administrator\Desktop\DataStruct\Program\x64\Debug\Class 06th (Linear Queue).exe
