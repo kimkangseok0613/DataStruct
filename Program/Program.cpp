@@ -6,12 +6,25 @@ template <typename T>
 class Graph
 {
 private:
+	struct Node
+	{
+		T data;
+		Node* next;
+
+		Node(T data, Node* link = nullptr)
+		{
+			this->data = data;
+
+			next = link;
+		}
+	};
+
 	int size;		// 정점의 개수
-	int count;		// 인접 행렬의 크기
+	int count;		// 인접 리스트의 크기
 	int capacity;	// 최대 용량
 
 	T* vertex;		// 정점의 집합
-	int** matrix;	// 인접 행렬
+	Node** list;	// 인접 리스트
 public:
 	Graph()
 	{
@@ -20,7 +33,7 @@ public:
 		capacity = 0;
 
 		vertex = nullptr;
-		matrix = nullptr;
+		list = nullptr;
 	}
 	void resize(int newSize)
 	{
@@ -39,6 +52,24 @@ public:
 
 		vertex = container;
 	}
+	void resize()
+	{
+		Node** newList = new Node * [size];
+
+		for (int i = 0; i < size; i++)
+		{
+			newList[i] = nullptr;
+		}
+		for (int i = 0; i < count; i++)
+		{
+			newList[i] = list[i];
+		}
+		delete[] list;
+
+		list = newList;
+
+		count = size;
+	}
 	void push(T data)
 	{
 		if (capacity <= 0)
@@ -55,7 +86,7 @@ public:
 	{
 		if (size <= 0)
 		{
-			cout << "adjacency matrix is empty" << endl;
+			cout << "adjacency list is empty" << endl;
 		}
 		else if (i >= size || j >= size)
 		{
@@ -63,25 +94,32 @@ public:
 		}
 		else
 		{
-			if (matrix == nullptr)
+			if (list == nullptr)
 			{
-				count = size;
-
-				matrix = new int* [size];
+				list = new Node* [size];
 
 				for (int i = 0; i < size; i++)
 				{
-					matrix[i] = new int[size];
-
-					for (int j = 0; j < size; j++)
-					{
-						matrix[i][j] = 0;
-					}
+					list[i] = nullptr;
 				}
+				count = size;
 			}
-			matrix[i][j] = 1;
-			matrix[j][i] = 1;
-		}		
+			else if (count < size)
+			{
+				resize();
+			}
+			list[i] =new Node(vertex[j],list[i]);
+			list[j] =new Node(vertex[i],list[j]);
+		}
+	}
+	void render()
+	{
+		Node* currentNode;
+		//A >> B
+		//B >> C >> A
+		//C
+		//D
+		// 첫번째 인덱스 출력, 2번째 인덱스 출력
 	}
 };
 
@@ -92,9 +130,14 @@ int main()
 	graph.push('A');
 	graph.push('B');
 	graph.push('C');
+	graph.push('D');
 
-	graph.edge(0, 1);
-	graph.edge(5, 6);
+	graph.edge(1, 2);
+	graph.edge(1, 3);
+
+	graph.push('E');
+
+	graph.edge(2, 4);
 
 	return 0;
 }
