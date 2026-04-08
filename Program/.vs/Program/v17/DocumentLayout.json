@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\DataStruct\\Program\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B0D81CD4-E51A-4AF6-9020-4848B8CB7E2C}|..\\Class 12th (Binary Search Tree)\\Class 12th (Binary Search Tree).vcxproj|C:\\Users\\Administrator\\Desktop\\DataStruct\\Class 12th (Binary Search Tree)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2B069B2-2DCC-493E-8B17-058F87892BCF}|Program.vcxproj|C:\\Users\\Administrator\\Desktop\\DataStruct\\Program\\Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2B069B2-2DCC-493E-8B17-058F87892BCF}|Program.vcxproj|solutionrelative:Program.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -19,12 +22,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\DataStruct\\Class 12th (Binary Search Tree)\\Source.cpp",
+              "RelativeDocumentMoniker": "..\\Class 12th (Binary Search Tree)\\Source.cpp",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\DataStruct\\Class 12th (Binary Search Tree)\\Source.cpp",
+              "RelativeToolTip": "..\\Class 12th (Binary Search Tree)\\Source.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-08T12:40:59.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cpp",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\DataStruct\\Program\\Program.cpp",
               "RelativeDocumentMoniker": "Program.cpp",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\DataStruct\\Program\\Program.cpp",
               "RelativeToolTip": "Program.cpp",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAQwJ8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-16T11:03:44.733Z",
               "EditorCaption": ""
